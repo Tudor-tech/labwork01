@@ -7,7 +7,8 @@ public class Main {
     static void main() {
         List<Integer> n = getNumbers();
         List<Integer> even =  getEvenNumbers(n);
-        System.out.println(even);
+        List<Integer> odd =  getOddNumbers(n);
+        System.out.println(odd);
     }
 
     public static List<Integer> getNumbers() {
@@ -26,5 +27,15 @@ public class Main {
             }
         }
         return numere1;
+    }
+
+    public static List<Integer> getOddNumbers(List<Integer> lista1) {
+        List<Integer> numere2 = new ArrayList<>();
+        for(Integer i : lista1) {
+            if (i % 2 != 0) {
+                numere2.add(i);
+            }
+        }
+        return numere2;
     }
 }
