@@ -6,7 +6,8 @@ import java.util.List;
 public class Main {
     static void main() {
         List<Integer> n = getNumbers();
-        System.out.println(n);
+        List<Integer> even =  getEvenNumbers(n);
+        System.out.println(even);
     }
 
     public static List<Integer> getNumbers() {
@@ -15,5 +16,15 @@ public class Main {
             numere.add(i);
         }
         return numere;
+    }
+
+    public static List<Integer> getEvenNumbers(List<Integer> lista) {
+        List<Integer> numere1 = new ArrayList<>();
+        for(Integer i : lista) {
+            if (i % 2 == 0) {
+                numere1.add(i);
+            }
+        }
+        return numere1;
     }
 }
