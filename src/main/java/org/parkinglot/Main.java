@@ -8,6 +8,10 @@ public class Main {
         numbers.stream()
                 .filter(number -> number % 2 == 0)
                 .forEach(System.out::println);
+
+        numbers.stream()
+                .filter(number -> number % 2 != 0)
+                .forEach(System.out::println);
     }
 
     public static List<Integer> getNumbers() {
