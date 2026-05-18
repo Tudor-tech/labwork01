@@ -1,41 +1,40 @@
 package org.parkinglot;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
     static void main() {
         List<Integer> n = getNumbers();
-        List<Integer> even =  getEvenNumbers(n);
-        List<Integer> odd =  getOddNumbers(n);
+        List<Integer> even =  filterEvenNumbers(n);
+        List<Integer> odd =  filterOddNumbers(n);
         System.out.println(odd);
     }
 
     public static List<Integer> getNumbers() {
-        List<Integer> numere = new ArrayList<>();
+        List<Integer> numbers = new ArrayList<>();
         for (int i = 1; i <= 100; i++) {
-            numere.add(i);
+            numbers.add(i);
         }
-        return numere;
+        return numbers;
     }
 
-    public static List<Integer> getEvenNumbers(List<Integer> lista) {
-        List<Integer> numere1 = new ArrayList<>();
+    public static List<Integer> filterEvenNumbers(List<Integer> lista) {
+        List<Integer> even = new ArrayList<>();
         for(Integer i : lista) {
             if (i % 2 == 0) {
-                numere1.add(i);
+                even.add(i);
             }
         }
-        return numere1;
+        return even;
     }
 
-    public static List<Integer> getOddNumbers(List<Integer> lista1) {
-        List<Integer> numere2 = new ArrayList<>();
+    public static List<Integer> filterOddNumbers(List<Integer> lista1) {
+        List<Integer> odd = new ArrayList<>();
         for(Integer i : lista1) {
             if (i % 2 != 0) {
-                numere2.add(i);
+                odd.add(i);
             }
         }
-        return numere2;
+        return odd;
     }
 }
