@@ -1,13 +1,13 @@
 package org.parkinglot;
-import org.w3c.dom.ls.LSOutput;
-
 import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
     static void main() {
         List<Integer> numbers = getNumbers();
-        numbers.stream().forEach(number -> System.out.println(number)) ;
+        numbers.stream()
+                .filter(number -> number % 2 == 0)
+                .forEach(System.out::println);
     }
 
     public static List<Integer> getNumbers() {
